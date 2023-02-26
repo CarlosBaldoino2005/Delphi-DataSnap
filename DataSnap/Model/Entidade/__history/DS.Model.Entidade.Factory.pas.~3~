@@ -1,0 +1,24 @@
+unit DS.Model.Entidade.Factory;
+
+interface
+
+uses DS.Model.Entidade.Produto;
+
+type
+  TModelEntidadeFactory = class
+    private
+      FModelEntidade : TModelEntidadeProduto;
+    public
+      function Produto : TModelEntidadeProduto;
+  end;
+
+implementation
+
+{ TModelEntidadeFactory }
+
+function TModelEntidadeFactory.Produto: TModelEntidadeProduto;
+begin
+  result := FModelEntidade;
+end;
+
+end.
